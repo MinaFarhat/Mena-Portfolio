@@ -79,7 +79,7 @@ export default function Navbar() {
         </motion.a>
 
         <motion.button
-          className="lg:hidden text-2xl z-50 relative"
+          className="lg:hidden text-2xl z-50 relative bottom-0"
           onClick={() => setIsOpen(!isOpen)}
           whileHover={{ scale: 1.2 }}
         >
@@ -113,7 +113,7 @@ export default function Navbar() {
                 <div className="flex justify-end p-4">
 
                 </div>
-                <ul className="flex flex-col items-start px-8 gap-y-6 font-semibold">
+                <ul className="flex flex-col items-start px-8 gap-y-6 font-semibold pt-7">
                   {["about", "skills", "projects", "contact"].map((section) => (
                     <motion.li
                       key={section}
