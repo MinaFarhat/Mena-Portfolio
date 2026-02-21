@@ -94,7 +94,7 @@ export default function Projects() {
             <img
               src={hoverPreview.src}
               alt="preview"
-              className="w-full h-28 object-containt rounded-lg mb-1 transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-28 object-fit:cover rounded-lg mb-1 transition-transform duration-300 group-hover:scale-110"
               onLoad={(e) => {
                 e.currentTarget.style.opacity = 1;
               }}
@@ -214,8 +214,15 @@ export default function Projects() {
                         src={project.image}
                         alt={project.name}
                         className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                        style={{
+                          opacity: 0,
+                          filter: "blur(10px)",
+                          transform: "scale(1.05)"
+                        }}
                         onLoad={(e) => {
                           e.currentTarget.style.opacity = 1;
+                          e.currentTarget.style.filter = "blur(0px)";
+                          e.currentTarget.style.transform = "scale(1)";
                         }}
                         loading="eager"
                       />
